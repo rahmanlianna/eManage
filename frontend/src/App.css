@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
+
+body {
+  margin: 0;
+  background-color: #F7F8F2;
+  font-family: 'Inria Serif', serif;
+  color: #35523A;
+}
+
+
+#root {
+  min-height: 100vh;
+}
+
+
+.app {
+  padding: 40px;
+}
+
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+
+h2 {
+  margin-top: 0;
+}
+
+
+
+/* -------------------
+   TOP CARDS
+------------------- */
+
+.cards {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+
+.card {
+  width: 190px;
+  min-height: 110px;
+  padding: 22px;
+  border-radius: 18px;
+  color: #35523A;
+  box-shadow: 0 4px 14px rgba(53, 82, 58, 0.08);
+}
+
+
+.card:nth-child(1) {
+  background-color: #EAF4E3;
+}
+
+
+.card:nth-child(2) {
+  background-color: #DCE8D5;
+}
+
+
+.card:nth-child(3) {
+  background-color: #EDF2DF;
+}
+
+
+.card:nth-child(4) {
+  background-color: #C9D8B6;
+}
+
+
+.card h3 {
+  margin: 0 0 15px 0;
+  font-weight: 400;
+}
+
+
+.card p {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+
+/* -------------------
+   EMAIL SECTION
+------------------- */
+
+.email-section {
+  background-color: #E7EFE2;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+}
+
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #B9C8AE;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+
+button {
+  margin-top: 15px;
+  background-color: #6F946A;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #5D8059;
+}
+
+
+.message {
+  margin-top: 12px;
+}
+
+
+
+/* -------------------
+   EANALYSIS
+------------------- */
+
+.analysis-section {
+  margin-bottom: 35px;
+}
+
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+
+.analysis-box {
+  background-color: #EEF4E8;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+
+.analysis-box h3 {
+  margin-top: 0;
+}
+
+
+
+/* -------------------
+   WEEKLY TRACKER
+------------------- */
+
+.weekly-section {
+  background-color: #E3F0DD;
+  padding: 25px;
+  border-radius: 18px;
+}
+
+
+.weekly-description {
+  color: #667A64;
+  margin-top: -8px;
+  margin-bottom: 22px;
+}
+
+
+.weekly-project {
+  background-color: #FFFFFF;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+
+  box-shadow:
+    0 3px 10px
+    rgba(53, 82, 58, 0.06);
+}
+
+
+.weekly-project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.weekly-project-top h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+.weekly-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 18px;
+}
+
+
+.weekly-details h4 {
+  margin-bottom: 8px;
+}
+
+
+.weekly-details p {
+  margin: 6px 0;
+}
+
+
+.delete-button {
+  background-color: #D7B7B0;
+  margin: 0;
+  padding: 8px 15px;
+}
+
+
+.delete-button:hover {
+  background-color: #C99F96;
+}
+
+
+.empty-projects {
+  background-color: white;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+
+
+/* -------------------
+   SMALL SCREENS
+------------------- */
+
+@media (max-width: 800px) {
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .weekly-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .app {
+    padding: 20px;
+  }
+
+}
