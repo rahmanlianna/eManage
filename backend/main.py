@@ -7,10 +7,10 @@ import re
 app = FastAPI()
 
 
-# --------------------
+
 # CORS
 # Allows React to talk to FastAPI
-# --------------------
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -28,9 +28,9 @@ app.add_middleware(
 )
 
 
-# --------------------
+
 # TEMPORARY DATA
-# --------------------
+
 
 projects = [
     {
@@ -52,9 +52,9 @@ tasks = [
 ]
 
 
-# --------------------
+
 # DATA MODELS
-# --------------------
+
 
 class Project(BaseModel):
     name: str
@@ -74,9 +74,9 @@ class EmailInput(BaseModel):
     text: str
 
 
-# --------------------
+
 # HOME
-# --------------------
+
 
 @app.get("/")
 def home():
@@ -85,9 +85,9 @@ def home():
     }
 
 
-# --------------------
+
 # PROJECTS
-# --------------------
+
 
 @app.get("/projects")
 def get_projects():
@@ -104,9 +104,9 @@ def add_project(project: Project):
     return new_project
 
 
-# --------------------
+
 # TASKS
-# --------------------
+
 
 @app.get("/tasks")
 def get_tasks():
@@ -141,9 +141,9 @@ def analyze_email(email: EmailInput):
     ]
 
 
-    # --------------------
+ 
     # ACTION WORDS
-    # --------------------
+
 
     action_words = [
         "please",
@@ -189,9 +189,9 @@ def analyze_email(email: EmailInput):
     ]
 
 
-    # --------------------
+  
     # RISK WORDS
-    # --------------------
+  
 
     risk_words = [
         "risk",
@@ -230,9 +230,9 @@ def analyze_email(email: EmailInput):
     ]
 
 
-    # --------------------
+  
     # DEADLINE WORDS
-    # --------------------
+    
 
     deadline_words = [
         "monday",
@@ -251,9 +251,9 @@ def analyze_email(email: EmailInput):
     ]
 
 
-    # --------------------
+    
     # PROJECT WORDS
-    # --------------------
+
 
     project_words = [
         "project",
@@ -278,9 +278,8 @@ def analyze_email(email: EmailInput):
     deadlines = []
 
 
-    # --------------------
     # ANALYZE EACH LINE
-    # --------------------
+
 
     for line in lines:
 
@@ -322,9 +321,9 @@ def analyze_email(email: EmailInput):
                 deadlines.append(date)
 
 
-    # --------------------
+ 
     # FIND PROJECT NAME
-    # --------------------
+    
 
     project_name = "Project Update"
 
@@ -340,9 +339,9 @@ def analyze_email(email: EmailInput):
             break
 
 
-    # --------------------
+
     # SEND RESULTS TO REACT
-    # --------------------
+
 
     return {
         "project": project_name,
