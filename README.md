@@ -17,6 +17,23 @@ The application then analyzes the text and organizes the information into:
 
 Each analysis can also be saved to a Weekly Project Tracker for up to 7 days.
 
+## Design Process
+
+Before building eManage, I created the dashboard layout and user interface in Figma.
+
+The Figma design helped define:
+
+- Dashboard structure
+- Color palette
+- Project summary cards
+- Email analysis layout
+- Weekly project tracker
+- Overall user flow
+
+### Figma Prototype
+
+[View the eManage Figma Design] https://www.figma.com/design/3XyVS7IkkmIzzKxvwHZZ9q/ProjectLens-AI-Project-Delivery-Dashboard?node-id=0-1&t=s6ev8TS4gPhGAh7Z-1
+
 ## Features
 
 - Paste project emails and updates
