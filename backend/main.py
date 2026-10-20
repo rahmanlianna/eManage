@@ -123,9 +123,9 @@ def add_task(task: Task):
     return new_task
 
 
-# --------------------
+
 # EMAIL ANALYSIS
-# --------------------
+
 
 @app.post("/analyze")
 def analyze_email(email: EmailInput):
